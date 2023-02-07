@@ -3,7 +3,7 @@ import { AccesData } from "../acces-data/acces-data";
 import { Confirmation } from "../confirmation/confirmation";
 import { PersonalData } from "../personal-data/personal-data";
 
-export type PersonalData = {
+type PerData = {
   name: string;
   lastName: string;
   birthDate: string;
@@ -11,7 +11,7 @@ export type PersonalData = {
   email: string;
   checkbox: boolean;
 };
-export type AccesData = {
+type AccData = {
   username: string;
   password: string;
   repeatPassword: string;
@@ -21,7 +21,7 @@ export type FormPage = {
   step: number;
 };
 
-export type Data = PersonalData & AccesData & FormPage;
+export type Data = PerData & AccData & FormPage;
 
 export function UserForm() {
   const [count, setPage] = useState(1);
